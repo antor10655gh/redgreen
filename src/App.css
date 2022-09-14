@@ -13,14 +13,19 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .ant-layout-sider{
-  max-width: 228px!important;
-  min-width: 228px!important;
-  width: 250px!important;
+  background: #fff;
+  width: 256px!important;
+  max-width: 256px!important;
+  min-width: 256px!important;
 }
 .ant-input, .ant-input-search-button{
   border: none!important;
   padding: 5px;
   background: #F1F3F8!important;
+}
+
+.ant-layout-has-sider ul{
+  padding-left: 25px!important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
