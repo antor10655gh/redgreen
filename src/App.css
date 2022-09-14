@@ -27,6 +27,9 @@
 .ant-layout-has-sider ul{
   padding-left: 25px!important;
 }
+.ant-layout-has-sider ul li{
+  margin-left: 6px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
