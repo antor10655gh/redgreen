@@ -1,10 +1,26 @@
+@import 'antd/dist/antd.css';
 .App {
-  text-align: center;
+  text-align: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ant-layout-header{
+  z-index: 1;
+  height: auto;
+  padding: 0px;
+  line-height: 0;
+  padding: 5px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.ant-layout-sider{
+  max-width: 228px!important;
+  min-width: 228px!important;
+  width: 250px!important;
+}
+.ant-input, .ant-input-search-button{
+  border: none!important;
+  padding: 5px;
+  background: #F1F3F8!important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
