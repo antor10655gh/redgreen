@@ -31,16 +31,22 @@ const Sidebar = () => {
                 </Menu.Item>
                 <h3 style={{margin: "15px", marginTop:"30px"}} class="menu-title">OTHERS</h3>
                 <Menu.Item key="settings">
-                    <SettingFilled />
-                    <span>Settings</span>
+                    <Link to='/settings'>
+                        <SettingFilled />
+                        <span>Settings</span>
+                    </Link>
                 </Menu.Item>
                 <Menu.Item key="accounts">
-                    <UserOutlined />
-                    <span>Accounts</span>
+                    <Link to='/accounts'>
+                        <UserOutlined />
+                        <span>Accounts</span>
+                    </Link>
                 </Menu.Item>
                 <Menu.Item key="helps">
-                    <ExclamationCircleFilled />
-                    <span>Helps</span>
+                    <Link to='/helps'>
+                        <ExclamationCircleFilled />
+                        <span>Helps</span>
+                    </Link>
                 </Menu.Item>
             </Menu>
         </div>
