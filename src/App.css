@@ -47,6 +47,21 @@
   margin: 10px 0;
 }
 
+.topHeader{
+  top: 0;
+  width: 100%;
+  padding: 5px 0;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+.sideBar{
+  top: 70px;
+  width: 256px;
+  position: fixed;
+}
+
 h1{
   margin: 0;
 }

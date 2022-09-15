@@ -27,7 +27,10 @@ const Dashboard = () => {
     return (
         <div>
             <header>
-                <h1>Redgreen Sales</h1>
+                <h1 style={{
+                    fontSize: "18px",
+                    marginBottom: "10px"
+                }}>Redgreen Sales</h1>
             </header>
             <div>
                 <Alert
@@ -42,7 +45,7 @@ const Dashboard = () => {
             <div style={{marginTop: "20px"}}>
                 <Row gutter={16}>
                     <Col span={15}>
-                        <Card style={{padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px", minHeight: "360px"}}>
+                        <Card style={{padding: "10px", boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px", minHeight: "360px"}}>
                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                             <div>
                                 <h1 style={{fontSize:"22px", fontWeight: "bold"}}>Total Sale</h1>
@@ -82,7 +85,7 @@ const Dashboard = () => {
                         </Card>
                     </Col>
                     <Col span={9}>
-                        <Card style={{padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px", minHeight: "360px"}}>
+                        <Card style={{padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px", minHeight: "360px"}}>
                             <div style={{
                                 display: "flex",
                                 alignItems: "center",
@@ -130,19 +133,19 @@ const Dashboard = () => {
                 <Row gutter={16}>
                     <Col span={12}>
                         <Card 
-                            style={{padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"}}
+                            style={{padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"}}
                         >
                             <ProductData />
                         </Card>
                     </Col>
                     <Col span={12}>
                         <Card
-                            style={{padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"}}
+                            style={{padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"}}
                         >
                             <SalesData />
                         </Card>
                         <Card
-                            style={{marginTop: "20px",padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"}}
+                            style={{marginTop: "20px",padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"}}
                         >
                             <WeatherData />
                         </Card>

@@ -34,7 +34,7 @@ function App() {
               padding: '0 10px',
             }}
           >
-          <div style={{background: "#fff", padding: "24px", marginTop: "10px", minHeight: "480px"}}>
+          <div style={{background: "#fff", padding: "24px", marginTop: "70px", minHeight: "480px"}}>
             <Routes>
               <Route path='/' element={<Dashboard/>}></Route>
               <Route path='/map' element={<Map/>}></Route>

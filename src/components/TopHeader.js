@@ -26,7 +26,7 @@ const TopHeader = () => {
         });
       };
     return (
-        <div>
+        <div className='topHeader'>
           <Row>
             <Col style={{display: "flex", justifyContent: "center", alignItems: "center"}} span={4}>
               <img style={{width: "50px"}} src={logo} alt="" />

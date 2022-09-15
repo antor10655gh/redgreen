@@ -10,6 +10,7 @@
     "apexcharts": "^3.35.5",
     "less": "^4.1.3",
     "less-loader": "^11.0.0",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.0",
     "react-dom": "^18.2.0",
