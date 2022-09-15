@@ -4,6 +4,9 @@ import { MoreOutlined } from '@ant-design/icons';
 import moment from 'moment';
 import LineCharts from '../charts/LineCharts';
 import PieCharts from '../charts/PieCharts';
+import ProductData from '../partial/ProductData';
+import SalesData from '../partial/SalesData';
+import WeatherData from '../partial/WeatherData';
 
 // start ant-select
 const { Option } = Select;
@@ -118,6 +121,29 @@ const Dashboard = () => {
                             <div>
                                 <PieCharts></PieCharts>
                             </div>
+                        </Card>
+                    </Col>
+                </Row>
+            </div>
+            <div style={{marginTop: "20px"}}>
+                <Row gutter={16}>
+                    <Col span={12}>
+                        <Card 
+                            style={{padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"}}
+                        >
+                            <ProductData />
+                        </Card>
+                    </Col>
+                    <Col span={12}>
+                        <Card
+                            style={{padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"}}
+                        >
+                            <SalesData />
+                        </Card>
+                        <Card
+                            style={{marginTop: "20px",padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"}}
+                        >
+                            <WeatherData />
                         </Card>
                     </Col>
                 </Row>

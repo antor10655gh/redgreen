@@ -31,7 +31,27 @@
   margin-left: 6px;
 }
 
-h4{
+.product-main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-sub{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ant-divider-horizontal {
+  margin: 10px 0;
+}
+
+h1{
+  margin: 0;
+}
+
+h4,h5{
   margin: 0;
   color: gray;
 }
