@@ -85,8 +85,9 @@ const Dashboard = () => {
                         <Card style={{padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px", minHeight: "360px"}}>
                             <div style={{
                                 display: "flex",
+                                alignItems: "center",
+                                marginBottom: "20px",
                                 justifyContent: "space-between",
-                                alignItems: "center"
                             }}>
                                 <div>
                                     <h1 style={{fontSize:"22px", fontWeight: "bold"}}>Sales Chart</h1>

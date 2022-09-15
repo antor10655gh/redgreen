@@ -1,7 +1,7 @@
 import { Divider } from 'antd';
+import { Link } from 'react-router-dom';
 import { MoreOutlined } from '@ant-design/icons';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const ProductData = () => {
     const [products, setProducts] = useState([]);
@@ -17,15 +17,15 @@ const ProductData = () => {
             <div 
                 style={{
                     display: "flex",
+                    marginBottom: "20px",
+                    alignItems: "center",
                     justifyContent: "space-between",
-                    alignItems: "center"
                 }}>
                 <div>
                     <h1 
                         style={{
                             fontSize:"22px", 
                             fontWeight: "bold",
-                            marginBottom: "15px"
                         }}>
                             Most Popular Product
                     </h1>
@@ -55,7 +55,13 @@ const ProductData = () => {
                             </div>
                             <div>
                                 <h1>{product.title}</h1>
-                                <h5>{product.profit}</h5>
+                                {
+                                    product.profit < 0
+                                    ?
+                                    <h5 style={{color: "red"}}>{product.profit}% Increase</h5>
+                                    :
+                                    <h5>{product.profit}% Increase</h5>
+                                }
                             </div>
                         </div>
                         <div>
@@ -72,7 +78,7 @@ const ProductData = () => {
                     </div>
                 )
             }
-            <Link to="http://google.com" target="_blank">Show more</Link>
+            <Link style={{color: "#2D5BFF", fontWeight: "bold"}} to="http://google.com" target="_blank">Show more</Link>
             </div>
         </div>
     );
