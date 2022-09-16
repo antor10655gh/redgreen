@@ -21,12 +21,16 @@ function App() {
   const showSidebar = () =>{
     document.getElementById('sidebar').style.display = "block";
   }
+
+  const hideSidebar = () =>{
+    document.getElementById('sidebar').style.display = "none";
+  }
   
   return (
       <div className="App">
       <Layout>
       <Header>
-        <TopHeader showSidebar={showSidebar}></TopHeader>
+        <TopHeader showSidebar={showSidebar} hideSidebar={hideSidebar}></TopHeader>
       </Header>
       <Layout>
         <Sider id='sidebar'>

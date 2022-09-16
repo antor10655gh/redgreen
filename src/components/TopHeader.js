@@ -1,14 +1,14 @@
 import React from 'react';
 import logo from '../assets/images/logo.png'
 import { Col, Row, Input, Badge, Avatar, Button, Modal, Space} from 'antd';
-import { DownOutlined , BellFilled , ExclamationCircleOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+import { DownOutlined , BellFilled , ExclamationCircleOutlined, MenuUnfoldOutlined, CloseSquareOutlined } from '@ant-design/icons';
 
 
 const { confirm } = Modal;
 const { Search } = Input;
 const onSearch = (value) => console.log(value);
 
-const TopHeader = ({showSidebar}) => {
+const TopHeader = ({showSidebar, hideSidebar}) => {
     const showConfirm = () => {
         confirm({
           title: 'Do you Want to logout?',
@@ -33,7 +33,10 @@ const TopHeader = ({showSidebar}) => {
                 <img style={{width: "50px"}} src={logo} alt="" />
                 <span style={{fontSize: "24px", fontWeight: "bold"}}>RedGreen</span>
               </div>
-              <Button id='toggle-btn' onClick={showSidebar}><MenuUnfoldOutlined /></Button>
+              <div style={{display: "flex"}}>
+                <Button id='toggle-btn' onClick={showSidebar}><MenuUnfoldOutlined /></Button>
+                <Button id='toggle-btn' onClick={hideSidebar}><CloseSquareOutlined /></Button>
+              </div>
             </Col>
             <Col sm={{span:24}} md={{span:24}} lg={{span:20}}>
               <Row 
