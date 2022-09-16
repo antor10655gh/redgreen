@@ -119,12 +119,12 @@ const Dashboard = () => {
             </div>
             <div style={{marginTop: "20px"}}>
                 <Row gutter={[16, 16]}>
-                    <Col sm={{span:24}} md={{span:24}} lg={{span:12}}>
+                    <Col className='product-col' sm={{span:24}} md={{span:24}} lg={{span:12}}>
                         <Card className='product-card'>
                             <ProductData />
                         </Card>
                     </Col>
-                    <Col sm={{span:24}} md={{span:24}} lg={{span:12}}>
+                    <Col className='product-col' sm={{span:24}} md={{span:24}} lg={{span:12}}>
                         <Card className='sub-sale1'>
                             <SalesData />
                         </Card>

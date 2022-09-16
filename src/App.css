@@ -103,6 +103,26 @@ h4,h5{
   }
 }
 
+@media screen and (max-width: 562px) {
+  .top-col{
+    width: 100%;
+  }
+  .product-col{
+    width: 100%;
+  }
+  .search-box{
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .top-col2{
+    width: 100%;
+  }
+  .top-col2 ul{
+    justify-content: center!important;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

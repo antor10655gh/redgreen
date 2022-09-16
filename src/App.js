@@ -28,37 +28,37 @@ function App() {
   
   return (
       <div className="App">
-      <Layout>
-      <Header>
-        <TopHeader showSidebar={showSidebar} hideSidebar={hideSidebar}></TopHeader>
-      </Header>
-      <Layout>
-        <Sider id='sidebar'>
-          <Sidebar></Sidebar>
-        </Sider>
         <Layout>
-          <Content
-            style={{
-              padding: '0 10px',
-            }}
-          >
-          <div className='main-content'>
-            <Routes>
-              <Route path='/' element={<Dashboard/>}></Route>
-              <Route path='/map' element={<Map/>}></Route>
-              <Route path='/menu' element={<Menu />}></Route>
-              <Route path='/settings' element={<Settings />}></Route>
-              <Route path='/accounts' element={<Accounts />}></Route>
-              <Route path='/helps' element={<Helps />}></Route>
-            </Routes>
-          </div>
-          </Content>
-          <Footer>
-            <FooterMain></FooterMain>
-          </Footer>
+          <Header>
+            <TopHeader showSidebar={showSidebar} hideSidebar={hideSidebar}></TopHeader>
+          </Header>
+          <Layout>
+            <Sider id='sidebar'>
+              <Sidebar></Sidebar>
+            </Sider>
+            <Layout>
+              <Content
+                style={{
+                  padding: '0 10px',
+                }}
+              >
+              <div className='main-content'>
+                <Routes>
+                  <Route path='/' element={<Dashboard/>}></Route>
+                  <Route path='/map' element={<Map/>}></Route>
+                  <Route path='/menu' element={<Menu />}></Route>
+                  <Route path='/settings' element={<Settings />}></Route>
+                  <Route path='/accounts' element={<Accounts />}></Route>
+                  <Route path='/helps' element={<Helps />}></Route>
+                </Routes>
+              </div>
+              </Content>
+              <Footer>
+                <FooterMain></FooterMain>
+              </Footer>
+            </Layout>
+          </Layout>
         </Layout>
-      </Layout>
-      </Layout>
     </div>
   );
 }

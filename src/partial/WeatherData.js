@@ -1,7 +1,8 @@
+import './Partial.css';
+import moment from 'moment';
+import { Col, Row } from 'antd';
 import React, { useEffect, useState, } from 'react';
 import { MoreOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons';
-import { Col, Row } from 'antd';
-import moment from 'moment';
 
 const WeatherData = () => {
     const [weathers, setWeathers] = useState(null);
@@ -15,13 +16,7 @@ const WeatherData = () => {
     if(weathers){
         return (
             <div>
-               <div 
-                    style={{
-                        display: "flex",
-                        alignItems: "center",
-                        marginBottom: "20px",
-                        justifyContent: "space-between",
-                    }}>
+               <div className='weather-header'>
                     <div>
                         <h1 
                             style={{
@@ -37,44 +32,45 @@ const WeatherData = () => {
                </div>
                <div>
                   <Row>
-                    <Col span={12}>
-                        <div style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center"
-                        }}>
+                    <Col className='col' sm={{span:24}} md={{span:24}} lg={{span:12}}>
+                        <div className='weather-left'>
                             <h2>{moment().format('LT')}</h2>
                             <img src={weathers.condition.icon} alt="" />
                             <h3 style={{marginTop: "5px"}}>{weathers.condition.text}, {weathers.temp_c}°C</h3>
                         </div>
                     </Col>
-                    <Col span={12}>
+                    <Col className='col' sm={{span:24}} md={{span:24}} lg={{span:12}}>
                         <div>
-                            <div style={{
-                                display: "flex",
-                                alignItems: "center",
-                                marginBottom: "10px",
-                                justifyContent: "end",
-                            }}>
+                            <div className='weather-cl'>
                                 <h1>{moment().format("ddd, Do MMMM YYYY")}</h1>
                                 <div style={{
-                                    display: "flex",
                                     marginLeft: "5px",
-                                    alignItems: "center",
-                                    justifyContent: "end",
                                 }}>
                                     <LeftOutlined style={{cursor: "pointer", color: "gray"}} />
                                     <RightOutlined style={{cursor: "pointer"}} />
                                 </div>
                             </div>
                             <div>
-                                <ul style={{float: "right"}}>
-                                    <li>10:00 AM  Light Rain, 27°C</li>
-                                    <li>01:00 PM  Light Rain, 28°C</li>
-                                    <li>04:00 PM  Cloudy, 27°C</li>
-                                    <li>07:00 PM  Light Rain, 27°C</li>
-                                    <li>10:00 PM  Light Rain, 27°C</li>
-                                </ul>
+                                <div className='weather-list'>
+                                    <div>10:00 AM</div>
+                                    <div>Light Rain, 27°C</div>
+                                </div>
+                                <div className='weather-list'>
+                                    <div>01:00 PM</div>
+                                    <div>Light Rain, 28°C</div>
+                                </div>
+                                <div className='weather-list'>
+                                    <div>04:00 PM</div>
+                                    <div>Cloudy, 27°C</div>
+                                </div>
+                                <div className='weather-list'>
+                                    <div>07:00 PM</div>
+                                    <div>Light Rain, 27°C</div>
+                                </div>
+                                <div className='weather-list'>
+                                    <div>10:00 PM</div>
+                                    <div>Light Rain, 27°C</div>
+                                </div>
                             </div>
                         </div>
                     </Col>

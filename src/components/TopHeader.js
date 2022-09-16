@@ -28,7 +28,7 @@ const TopHeader = ({showSidebar, hideSidebar}) => {
     return (
         <div className='topHeader'>
           <Row>
-            <Col style={{padding: "0 30px",display: "flex", justifyContent: "space-between", alignItems: "center"}} sm={{span:24}} md={{span:24}} lg={{span:4}}>
+            <Col className='top-col' style={{padding: "0 30px",display: "flex", justifyContent: "space-between", alignItems: "center"}} sm={{span:24}} md={{span:24}} lg={{span:4}}>
               <div  style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                 <img style={{width: "50px"}} src={logo} alt="" />
                 <span style={{fontSize: "24px", fontWeight: "bold"}}>RedGreen</span>
@@ -44,14 +44,14 @@ const TopHeader = ({showSidebar, hideSidebar}) => {
                 paddingLeft: 35,
                 paddingRight: 25,
               }}>
-                <Col sm={{span:24}} md={{span:16}} lg={{span:16}}>
+                <Col className='top-col2' sm={{span:24}} md={{span:16}} lg={{span:16}}>
                 <Search
                   className='search-box'
                   placeholder="Search"
                   onSearch={onSearch}
                 />
                 </Col>
-                <Col sm={{span:24}} md={{span:8}} lg={{span:8}}>
+                <Col className='top-col2 right' sm={{span:24}} md={{span:8}} lg={{span:8}}>
                   <ul 
                   style={{
                     display: 'flex',
