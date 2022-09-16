@@ -50,16 +50,33 @@
 .topHeader{
   top: 0;
   width: 100%;
+  z-index: 1;
   padding: 5px 0;
   position: fixed;
   background-color: #fff;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
 
+.topHeader #toggle-btn{
+  display: none;
+}
+
+.search-box{
+    width: 500px;
+    margin-top: 12px;
+}
+
 .sideBar{
   top: 70px;
   width: 256px;
   position: fixed;
+}
+
+.main-content{
+  background: #fff;  
+  padding: 24px  ;
+  margin-top: 70px ; 
+  min-height: 480px; 
 }
 
 h1{
@@ -69,6 +86,21 @@ h1{
 h4,h5{
   margin: 0;
   color: gray;
+}
+
+@media screen and (max-width: 992px) {
+  .main-content{
+    margin-top: 120px;
+  }
+  .topHeader #toggle-btn{
+    display: block;
+  }
+  .sideBar{
+    top: 120px;
+  }
+  #sidebar{
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

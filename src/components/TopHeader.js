@@ -1,14 +1,14 @@
 import React from 'react';
 import logo from '../assets/images/logo.png'
 import { Col, Row, Input, Badge, Avatar, Button, Modal, Space} from 'antd';
-import { DownOutlined , BellFilled , ExclamationCircleOutlined } from '@ant-design/icons';
+import { DownOutlined , BellFilled , ExclamationCircleOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 
 
 const { confirm } = Modal;
 const { Search } = Input;
 const onSearch = (value) => console.log(value);
 
-const TopHeader = () => {
+const TopHeader = ({showSidebar}) => {
     const showConfirm = () => {
         confirm({
           title: 'Do you Want to logout?',
@@ -28,27 +28,27 @@ const TopHeader = () => {
     return (
         <div className='topHeader'>
           <Row>
-            <Col style={{display: "flex", justifyContent: "center", alignItems: "center"}} span={4}>
-              <img style={{width: "50px"}} src={logo} alt="" />
-              <span style={{fontSize: "24px", fontWeight: "bold"}}>RedGreen</span>
+            <Col style={{padding: "0 30px",display: "flex", justifyContent: "space-between", alignItems: "center"}} sm={{span:24}} md={{span:24}} lg={{span:4}}>
+              <div  style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                <img style={{width: "50px"}} src={logo} alt="" />
+                <span style={{fontSize: "24px", fontWeight: "bold"}}>RedGreen</span>
+              </div>
+              <Button id='toggle-btn' onClick={showSidebar}><MenuUnfoldOutlined /></Button>
             </Col>
-            <Col span={20}>
+            <Col sm={{span:24}} md={{span:24}} lg={{span:20}}>
               <Row 
               style={{
                 paddingLeft: 35,
                 paddingRight: 25,
               }}>
-                <Col span={16}>
+                <Col sm={{span:24}} md={{span:16}} lg={{span:16}}>
                 <Search
+                  className='search-box'
                   placeholder="Search"
                   onSearch={onSearch}
-                  style={{
-                    width: 500,
-                    marginTop: 12,
-                  }}
                 />
                 </Col>
-                <Col span={8}>
+                <Col sm={{span:24}} md={{span:8}} lg={{span:8}}>
                   <ul 
                   style={{
                     display: 'flex',

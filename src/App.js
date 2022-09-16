@@ -17,15 +17,19 @@ const { Header, Footer, Sider, Content } = Layout;
 
 
 function App() {
+
+  const showSidebar = () =>{
+    document.getElementById('sidebar').style.display = "block";
+  }
   
   return (
       <div className="App">
       <Layout>
       <Header>
-        <TopHeader></TopHeader>
+        <TopHeader showSidebar={showSidebar}></TopHeader>
       </Header>
       <Layout>
-        <Sider>
+        <Sider id='sidebar'>
           <Sidebar></Sidebar>
         </Sider>
         <Layout>
@@ -34,7 +38,7 @@ function App() {
               padding: '0 10px',
             }}
           >
-          <div style={{background: "#fff", padding: "24px", marginTop: "70px", minHeight: "480px"}}>
+          <div className='main-content'>
             <Routes>
               <Route path='/' element={<Dashboard/>}></Route>
               <Route path='/map' element={<Map/>}></Route>

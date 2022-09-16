@@ -3,7 +3,7 @@ import Chart from 'react-apexcharts'
 
 const PieCharts = () => {
     return (
-        <div>
+        <div style={{marginTop: "50px", display: "flex", justifyContent: "center"}}>
           <Chart
             type='donut'
             width={300}

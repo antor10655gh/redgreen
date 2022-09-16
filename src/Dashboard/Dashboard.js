@@ -1,12 +1,13 @@
+import './Dashboard.css'
 import React from 'react';
-import { Alert, Col, Row, DatePicker,Select, Card } from 'antd';
-import { MoreOutlined } from '@ant-design/icons';
 import moment from 'moment';
-import LineCharts from '../charts/LineCharts';
 import PieCharts from '../charts/PieCharts';
-import ProductData from '../partial/ProductData';
 import SalesData from '../partial/SalesData';
+import LineCharts from '../charts/LineCharts';
+import { MoreOutlined } from '@ant-design/icons';
+import ProductData from '../partial/ProductData';
 import WeatherData from '../partial/WeatherData';
+import { Alert, Col, Row, DatePicker,Select, Card } from 'antd';
 
 // start ant-select
 const { Option } = Select;
@@ -43,55 +44,46 @@ const Dashboard = () => {
                 />
             </div>
             <div style={{marginTop: "20px"}}>
-                <Row gutter={16}>
-                    <Col span={15}>
-                        <Card style={{padding: "10px", boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px", minHeight: "360px"}}>
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center"}}>
-                            <div>
-                                <h1 style={{fontSize:"22px", fontWeight: "bold"}}>Total Sale</h1>
-                            </div>
-                            <div 
-                            style={{
-                                display: "flex", 
-                                alignItems: "center"
-                            }}>
-                                <DatePicker defaultValue={moment('01/01/2015', dateFormatList[0])} format={dateFormatList} />
-                                <MoreOutlined style={{ fontSize: '22px'}} />
-                            </div>
-                        </div>
-                        <Row style={{paddingTop: "30px"}}>
-                            <Col span={6}>
+                <Row gutter={[16, 16]}>
+                    <Col sm={{span:24}} md={{span:24}} lg={{span:15}}>
+                        <Card className='sale-card'>
+                            <div className='sale-header'>
                                 <div>
-                                    <div>
-                                        <h4>TV</h4>
-                                        <h3>600.000</h3>
-                                    </div>
-                                    <div>
-                                        <h4>Laptop</h4>
-                                        <h3>1200.000</h3>
-                                    </div>
-                                    <div>
-                                        <h4>Other</h4>
-                                        <h3>210.387</h3>
-                                    </div>
+                                    <h1 style={{fontSize:"22px", fontWeight: "bold"}}>Total Sale</h1>
                                 </div>
-                            </Col>
-                            <Col span={18}>
-                                <div>
-                                    <LineCharts></LineCharts>
+                                <div className='sale-header2'>
+                                    <DatePicker defaultValue={moment('01/01/2015', dateFormatList[0])} format={dateFormatList} />
+                                    <MoreOutlined style={{ fontSize: '22px'}} />
                                 </div>
-                            </Col>
-                        </Row>
+                            </div>
+                            <Row style={{paddingTop: "30px"}}>
+                                <Col sm={{span:24}} md={{span:24}} lg={{span:6}}>
+                                    <div className='sale-list'>
+                                        <div>
+                                            <h4>TV</h4>
+                                            <h3>600.000</h3>
+                                        </div>
+                                        <div>
+                                            <h4>Laptop</h4>
+                                            <h3>1200.000</h3>
+                                        </div>
+                                        <div>
+                                            <h4>Other</h4>
+                                            <h3>210.387</h3>
+                                        </div>
+                                    </div>
+                                </Col>
+                                <Col sm={{span:24}} md={{span:24}} lg={{span:18}}>
+                                    <div>
+                                        <LineCharts></LineCharts>
+                                    </div>
+                                </Col>
+                            </Row>
                         </Card>
                     </Col>
-                    <Col span={9}>
-                        <Card style={{padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px", minHeight: "360px"}}>
-                            <div style={{
-                                display: "flex",
-                                alignItems: "center",
-                                marginBottom: "20px",
-                                justifyContent: "space-between",
-                            }}>
+                    <Col sm={{span:24}} md={{span:24}} lg={{span:9}}>
+                        <Card className='sale-card'>
+                            <div className='chart-one'>
                                 <div>
                                     <h1 style={{fontSize:"22px", fontWeight: "bold"}}>Sales Chart</h1>
                                 </div>
@@ -99,11 +91,7 @@ const Dashboard = () => {
                                     <MoreOutlined style={{ fontSize: '22px'}} />
                                 </div>
                             </div>
-                            <div style={{
-                                display: "flex",
-                                justifyContent: "space-between",
-                                alignItems: "center"
-                            }}>
+                            <div className='chart-two'>
                                 <div>
                                     <h4>Todays Sale</h4>
                                     <h1 style={{ fontSize: '22px'}}>156</h1>
@@ -130,23 +118,17 @@ const Dashboard = () => {
                 </Row>
             </div>
             <div style={{marginTop: "20px"}}>
-                <Row gutter={16}>
-                    <Col span={12}>
-                        <Card 
-                            style={{padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"}}
-                        >
+                <Row gutter={[16, 16]}>
+                    <Col sm={{span:24}} md={{span:24}} lg={{span:12}}>
+                        <Card className='product-card'>
                             <ProductData />
                         </Card>
                     </Col>
-                    <Col span={12}>
-                        <Card
-                            style={{padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"}}
-                        >
+                    <Col sm={{span:24}} md={{span:24}} lg={{span:12}}>
+                        <Card className='sub-sale1'>
                             <SalesData />
                         </Card>
-                        <Card
-                            style={{marginTop: "20px",padding: "10px",boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"}}
-                        >
+                        <Card className='sub-sale2'>
                             <WeatherData />
                         </Card>
                     </Col>
