@@ -56,11 +56,11 @@ const showConfirm = () => {
 const Product = () => (
   <Table dataSource={data}>
     <Column 
-      title="Banner" 
-      key="banner"
+      title="Image" 
+      key="image"
       render={(_, record) =>(
         <Space>
-            <img src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg" width={80} height={50} alt="" />
+            <img src="https://api.lorem.space/image/watch?w=150&h=150" width={80} height={50} alt="" />
         </Space>
       )}
       />
