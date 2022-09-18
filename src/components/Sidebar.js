@@ -17,9 +17,9 @@ const Sidebar = () => {
                     </Link>   
                 </Menu.Item>
                 <Menu.Item key="maps">
-                    <Link to='/map'>
+                    <Link to='/products'>
                         <FlagFilled />
-                        <span>Maps</span>
+                        <span>Products</span>
                     </Link> 
                 </Menu.Item>
                 <Menu.Item key="menu">

@@ -6,11 +6,11 @@ import TopHeader from './components/TopHeader';
 import FooterMain from './components/FooterMain';
 import { Route, Routes } from 'react-router-dom';
 import Dashboard from './Dashboard/Dashboard';
-import Map from './Dashboard/Menu/Map';
 import Menu from './Dashboard/Menu/Menu';
 import Settings from './Dashboard/Others/Settings';
 import Accounts from './Dashboard/Others/Accounts';
 import Helps from './Dashboard/Others/Helps';
+import Product from './Dashboard/Menu/Product';
 
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -44,8 +44,8 @@ function App() {
               >
               <div className='main-content'>
                 <Routes>
-                  <Route path='/' element={<Dashboard/>}></Route>
-                  <Route path='/map' element={<Map/>}></Route>
+                  <Route path='/' element={<Dashboard />}></Route>
+                  <Route path='/products' element={<Product />}></Route>
                   <Route path='/menu' element={<Menu />}></Route>
                   <Route path='/settings' element={<Settings />}></Route>
                   <Route path='/accounts' element={<Accounts />}></Route>
